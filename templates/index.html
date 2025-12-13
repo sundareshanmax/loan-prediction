@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loan Prediction</title>
+<style>
+body{font-family:Arial;background:#f4f6f9}
+.container{width:420px;margin:50px auto;background:#fff;padding:25px;border-radius:8px}
+input,select,button{width:100%;padding:8px;margin-top:8px}
+button{background:#007bff;color:#fff;border:none}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Loan Prediction</h2>
+<form method="post">
+<select name="Gender"><option value="1">Male</option><option value="0">Female</option></select>
+<select name="Married"><option value="1">Yes</option><option value="0">No</option></select>
+<input name="Dependents" placeholder="Dependents">
+<select name="Education"><option value="1">Graduate</option><option value="0">Not Graduate</option></select>
+<select name="Self_Employed"><option value="1">Yes</option><option value="0">No</option></select>
+<input name="ApplicantIncome" placeholder="Applicant Income">
+<input name="CoapplicantIncome" placeholder="Coapplicant Income">
+<input name="LoanAmount" placeholder="Loan Amount">
+<input name="Loan_Amount_Term" placeholder="Loan Term">
+<select name="Credit_History"><option value="1">Good</option><option value="0">Bad</option></select>
+<select name="Property_Area"><option value="2">Urban</option><option value="1">Semiurban</option><option value="0">Rural</option></select>
+<button type="submit">Predict</button>
+</form>
+{% if prediction %}<h3>{{ prediction }}</h3>{% endif %}
+</div>
+</body>
+</html>
